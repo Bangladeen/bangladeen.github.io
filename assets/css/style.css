@@ -117,6 +117,58 @@ section .title hr{
     margin: 10px auto;
 }
 
+/* Section Services */
+section .services{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+section .services .service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+section .services .service:hover{
+    transform: translateY(-10px);
+}
+section .services .service img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+section .services .service h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+section .services .service p{
+    font-size: 18px;
+    color: #666;
+}
+section .services .service a{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+section .services .service a.disabled{
+    background-color: #999;
+}
+section .services .service a:hover{
+    background-color: #555;
+}
+
 
 /* Footer */
 footer{
