@@ -9,6 +9,7 @@
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
 
     <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Meta Tags (SEO) -->
@@ -23,11 +24,20 @@
 <body>
     <!-- Navbar -->
     <nav>
-        <!-- Brand -->
-        <a href="/" class="brand">বাংলায় দ্বীন</a>
+        <div class="nav-container">
+            <!-- Brand -->
+            <a href="/" class="brand">বাংলায় দ্বীন</a>
+            
+            <!-- Menu bar -->
+            <div class="menu-bar">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
 
         <!-- Menu -->
-        <ul>
+        <ul class="menu-items">
             <li><a href="#">হোম</a></li>
             <li><a href="#">নামাযের সময়সূচী</a></li>
             <li><a href="#">কুরআন</a></li>
@@ -74,5 +84,8 @@
     <footer>
         <p>&copy; কপিরাইট ২০২৫</p>
     </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>
