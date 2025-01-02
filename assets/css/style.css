@@ -20,7 +20,7 @@ body{
     text-align: center;
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
 }
 .hero{
     display: flex;
