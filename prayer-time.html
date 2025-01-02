@@ -8,10 +8,13 @@
     <!-- Bangla Font -->
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
 
+    <!-- Font Awesome Link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/prayer-times.css">
     <!-- Meta Tags (SEO) -->
     <meta name="description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, কুরআন শরীফ, হাদিস শরীফ এবং ইসলামিক বিষয়বস্তু।">
     <meta name="keywords" content="ইসলাম, নামায, কুরআন, হাদিস, ইসলামিক, বাংলায় দ্বীন">
@@ -50,10 +53,51 @@
                 <h2>নামাযের সময়সূচী</h2>
                 <hr>
             </div>
+            <div class="city-choose">
+                <!-- Todo: City choosing feature -->
+            </div>
+            <div class="prayer-times">
+                <div class="prayer-time">
+                    <div class="name">
+                        <img src="assets/images/prayer-time.webp" alt="Fajr">
+                        <h3>ফজর</h3>
+                    </div>
+                    <h3 id="fajr">৪:২২ AM</h3>
+                </div>
+                <div class="prayer-time">
+                    <div class="name">
+                        <img src="assets/images/prayer-time.webp" alt="Dhuhr">
+                        <h3>যোহর</h3>
+                    </div>
+                    <h3 id="dhuhr">১২:১২ PM</h3>
+                </div>
+                <div class="prayer-time">
+                    <div class="name">
+                        <img src="assets/images/prayer-time.webp" alt="Asr">
+                        <h3>আসর</h3>
+                    </div>
+                    <h3 id="asr">৪:২২ PM</h3>
+                </div>
+                <div class="prayer-time">
+                    <div class="name">
+                        <img src="assets/images/prayer-time.webp" alt="Maghrib">
+                        <h3>মাগরিব</h3>
+                    </div>
+                    <h3 id="maghrib">৬:২২ PM</h3>
+                </div>
+                <div class="prayer-time">
+                    <div class="name">
+                        <img src="assets/images/prayer-time.webp" alt="Isha">
+                        <h3>এশা</h3>
+                    </div>
+                    <h3 id="isha">৭:২২ PM</h3>
+                </div>
+            </div>
         </section>
     </div>
 
     <!-- Scripts -->
     <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/prayer-time.js"></script>
 </body>
 </html>
