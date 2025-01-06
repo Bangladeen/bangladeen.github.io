@@ -1,3 +1,35 @@
+.city-choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.current-city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-city h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.current-city button {
+    padding: 5px 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.current-city button:hover {
+    background-color: #0056b3;
+}
+
 .prayer-times {
     display: flex;
     flex-direction: column;
