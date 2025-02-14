@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dua.css">
 
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" href="./favicon.ico" />
 
@@ -56,12 +63,17 @@
                 <hr />
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="দোয়া খুঁজুন...">
-                <button>খুঁজুন</button>
+                <input type="text" id="searchInput" placeholder="দোয়া খুঁজুন...">
+                <button onclick="searchDua()">খুঁজুন</button>
             </div>
         </section>
 
-        <!-- Thinking about This Design -->
+        <section class="dua-list" id="duaList">
+            <!-- Duas will be loaded here -->
+        </section>
+
+        <!-- Sentinel element for lazy loading -->
+        <div id="sentinel"></div>
     </div>
 
     <!-- Footer -->
@@ -71,5 +83,6 @@
 
     <!-- SCRIPTS -->
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/dua.js"></script>
 </body>
 </html>
