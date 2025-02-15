@@ -105,6 +105,15 @@ section .services .service a:hover{
     100% {background-size:25px 50% ,25px 50% ,25px 50%}
 }
 
+/* Alert or Notification Or Error Message */
+.text-center-danger{
+    text-align: center;
+    color: #dc3545;
+    font-size: 20px !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 footer{
     background-color: #333;

@@ -4,10 +4,25 @@ let currentIndex = 0;
 const itemsPerPage = 5;
 
 document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const duaId = urlParams.get('id');
+
     fetch('data/dua.json')
         .then(response => response.json())
         .then(data => {
             duaData = data;
+
+            if (duaId){
+                console.log('Dua ID:', duaId);
+                duaData = data.filter(dua => Number(dua.id) === Number(duaId));
+
+                // If not found any dua with this id
+                if (duaData.length === 0) {
+                    const duaList = document.getElementById('duaList');
+                    duaList.innerHTML = '<h2 class="text-center-danger">দুআ পাওয়া যায়নি</h2>';
+                    return;
+                }
+            }
             loadMoreDuas();
             setupIntersectionObserver();
         })
