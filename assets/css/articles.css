@@ -22,6 +22,7 @@
     border-bottom: 1px solid #ddd;
     display: block;
     width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .article h2 {
