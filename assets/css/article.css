@@ -64,6 +64,7 @@ body {
     height: auto;
     margin-bottom: 20px;
     border-radius: 8px;
+    aspect-ratio: 16 / 9;
 }
 
 .article-content h2 {
