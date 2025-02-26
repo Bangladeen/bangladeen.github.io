@@ -1,0 +1,49 @@
+body{
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+#ramadan-timetable {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#ramadan-timetable h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#ramadan-timetable p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#ramadan-timetable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ramadan-timetable th, #ramadan-timetable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#ramadan-timetable th {
+    background-color: #f2f2f2;
+}
+
+#ramadan-timetable a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#ramadan-timetable a:hover {
+    text-decoration: underline;
+}
