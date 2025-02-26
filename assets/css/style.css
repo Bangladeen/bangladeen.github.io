@@ -66,7 +66,7 @@ section .services .service p{
     font-size: 18px;
     color: #666;
 }
-section .services .service a{
+section .services .service a.go{
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #333;
@@ -75,10 +75,10 @@ section .services .service a{
     border-radius: 5px;
     transition: all 0.3s;
 }
-section .services .service a.disabled{
+section .services .service a.go.disabled{
     background-color: #999;
 }
-section .services .service a:hover{
+section .services .service a.go:hover{
     background-color: #555;
 }
 
