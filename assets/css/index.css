@@ -28,3 +28,9 @@
     max-width: 800px;
     font-weight: 600;
 }
+
+/* Attributing Text Style [small and small a] And it should be gray */
+small, small a {
+    color: #666 !important;
+    font-size: 10px;
+}
