@@ -3,7 +3,10 @@ name: Generate xml sitemap
 on:
   push:
     branches: [ main ]
-
+permissions:
+  contents: write # We generate static HTML, JS, CSS so we need write access to the repo
+  pages: write
+  id-token: write
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
