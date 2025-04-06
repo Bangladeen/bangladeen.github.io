@@ -1,94 +1,17 @@
-.top-section {
-    text-align: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.top-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.search-bar {
+.section{
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.search-bar input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    font-size: 1em;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
-
-/* Dua Items & Item */
-.dua-list {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #fff;
 }
-
-.dua-item {
-    width: 80%;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+.section ul{
+    width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px #ccc;
+    padding: 10px;
+    padding-left: 25px;
 }
-
-.dua-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dua-item h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.dua-item h3.arabic {
-    font-size: 40px !important;
-    color: #007bff;
-    margin-bottom: 10px;
-    text-align: right;
-    font-family: "Noto Sans Arabic", serif;
-}
-
-.dua-item p.bangla {
-    font-size: 1.3em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.dua-item p.bangla-meaning {
-    font-size: 1.2em;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.dua-item small.reference {
-    font-size: 0.8em;
-    color: #999;
+.section ul li a{
+    font-size: 1.5em;
+    padding: 5px 0;
 }

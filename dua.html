@@ -11,11 +11,13 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/dua.css">
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.maateen.me/bangla/font.css" as="style" />
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
@@ -70,25 +72,18 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <div id="main">
-        <section class="top-section">
-            <div class="title">
-                <h2>দোয়া সমূহ</h2>
-                <hr />
+        <div class="hero-overlay">
+            <div class="hero">
+                <h1>দোয়াসমুহ</h1>
+                <p>আল্লাহর কাছে দোয়া করা একটি গুরুত্বপূর্ণ আমল। এখানে কিছু গুরুত্বপূর্ণ দোয়া উল্লেখ করা হলো।</p>
             </div>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="দোয়া খুঁজুন...">
-                <button onclick="searchDua()">খুঁজুন</button>
-            </div>
+        </div>
+        <section class="section">
+            <ul>
+                <li><a href="dua/আউজু-বিল্লাহি-মিনাশ-শাইতানির-রজিম.html">আউজু বিল্লাহি মিনাশ শাইতানির রজিম</a></li>
+            </ul>
         </section>
-
-        <section class="dua-list" id="duaList">
-            <!-- Duas will be loaded here -->
-        </section>
-
-        <!-- Sentinel element for lazy loading -->
-        <div id="sentinel"></div>
     </div>
 
     <!-- Footer -->
