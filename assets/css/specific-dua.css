@@ -1,0 +1,52 @@
+.article-container {
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
+}
+body{
+    
+    background: #fdfaf4;
+}
+
+.article-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.arabic-text {
+    font-size: 2em;
+    margin: 20px 0;
+    /* Noto Sans Arabic */
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    padding: 10px;
+    font-weight: 600;
+    text-align: right;
+    direction: rtl;
+    padding: 10px 20px;
+    border-radius: 12px;
+    line-height: 1.8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section{
+    padding: 10px 0
+}
+
+.section h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+.section p{
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+section p.dua-source a{
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.back-link {
+    margin-top: 40px;
+}
