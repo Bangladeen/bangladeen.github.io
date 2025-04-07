@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #f8f9fabd;
+    width: 100wh;
 }
 
 /* Section  */
@@ -46,6 +46,7 @@ section .services .service{
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
+    background: #fff;
 }
 section .services .service:hover{
     transform: translateY(-10px);
@@ -124,4 +125,12 @@ footer{
 }
 footer p{
     font-size: 18px;
+}
+
+#main{
+    background: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
 }
