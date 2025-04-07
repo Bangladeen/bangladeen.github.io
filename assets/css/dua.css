@@ -1,17 +1,56 @@
-.section{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.dua-section {
+    padding: 60px 20px;
 }
-.section ul{
-    width: 100%;
-    border: 1px solid #ccc;
-    box-shadow: 0 5px 15px #ccc;
-    padding: 10px;
-    padding-left: 25px;
+
+.dua-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
 }
-.section ul li a{
-    font-size: 1.5em;
-    padding: 5px 0;
+
+.dua-title {
+    font-size: 45px;
+    color: #1c3f2d;
+    margin-bottom: 10px;
+}
+
+.dua-description {
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.dua-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.dua-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dua-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dua-card a {
+    text-decoration: none;
+    color: #1c3f2d;
+}
+
+.dua-card h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.dua-card p {
+    font-size: 20px;
+    color: #666;
 }
