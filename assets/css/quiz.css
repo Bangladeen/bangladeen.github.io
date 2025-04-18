@@ -1,0 +1,92 @@
+body{
+    background: #ccccccbb;
+}
+
+.quiz-area {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.option.correct label{
+    color: green !important;
+    font-size: 1.2rem !important
+}
+
+.option input[type="radio"] {
+    accent-color: #007bff;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.option label {
+    font-size: 1.1rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.correct-option-area {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e6f7e6;
+    border: 1px solid #b2d8b2;
+    border-radius: 8px;
+}
+
+.correct-option-area .option {
+    display: none; /* Hide the correct option radio button */
+}
+
+.correct-answer {
+    color: #2d6a2d;
+    line-height: 1.5;
+}
+
+.correct-answer strong {
+    color: #1a4d1a;
+    font-size: 1rem;
+}
+.correct-answer h2.answer{
+    font-size: 1.3rem !important;
+    color: #000;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .quiz-area {
+        padding: 15px;
+    }
+
+    .quiz-title {
+        font-size: 1.25rem;
+    }
+
+    .option label {
+        font-size: 0.9rem;
+    }
+
+    .correct-answer {
+        font-size: 0.9rem;
+    }
+}
