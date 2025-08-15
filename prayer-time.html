@@ -1,126 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BanglaDeen</title>
+    <title>নামাযের সময়সূচী - বাংলায় দ্বীন</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Bangla Font -->
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
-
-    <!-- Font Awesome Link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/nav.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prayer-times.css">
+    <!-- Hind Siliguri Font for English -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="https://placehold.co/32x32/006a4e/ffffff?text=BD" />
 
     <!-- Meta Tags (SEO) -->
-    <meta name="description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, কুরআন শরীফ, হাদিস শরীফ এবং ইসলামিক বিষয়বস্তু।">
-    <meta name="keywords" content="ইসলাম, নামায, কুরআন, হাদিস, ইসলামিক, বাংলায় দ্বীন">
-    <meta name="author" content="বাংলায় দ্বীন">
+    <meta name="description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
+    <meta name="keywords" content="ইসলাম, নামায, কুরআন, হাদিস, ইসলামিক, বাংলায় দ্বীন">
+    <meta name="author" content="বাংলায় দ্বীন">
     <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="bZ2u3bU38K-drTe1S1KOPdPw6_iWjrBAdsgnwM1PHek" />
 
     <!-- Opengraph -->
-    <meta property="og:title" content="বাংলায় দ্বীন">
+    <meta property="og:title" content="বাংলায় দ্বীন">
+    <meta property="og:image" content="https://placehold.co/1200x630/006a4e/ffffff?text=BanglaDeen">
+    <meta property="og:description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
+    <meta property="og:url" content="https://bangladeen.github.io/">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K541WHG76Z"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-K541WHG76Z');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K541WHG76Z');
     </script>
+    
+    <style>
+        /* Primary font for Bangla text */
+        body {
+            font-family: 'Bangla', sans-serif;
+        }
+        /* A custom class for Hind Siliguri font, in case you need it for English text */
+        .font-siliguri {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav>
-        <div class="nav-container">
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+    <!-- Navbar (Copied from the original document) -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Brand -->
-            <a href="/" class="brand">বাংলায় দ্বীন</a>
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors">বাংলায় দ্বীন</a>
             
-            <!-- Menu bar -->
-            <div class="menu-bar">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <!-- Mobile Menu button -->
+            <button id="menu-toggle" class="md:hidden p-2 text-gray-700 hover:text-emerald-700 focus:outline-none rounded-lg">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Menu -->
-        <ul class="menu-items">
-            <li><a href="./">হোম</a></li>
-            <li><a href="prayer-time.html">নামাযের সময়সূচী</a></li>
-            <li><a href="dua.html">দোয়াসমুহ</a></li>
-            <li><a href="articles.html">প্রবন্ধসমূহ</a></li>
+        <!-- Menu items (hidden on mobile by default) -->
+        <ul id="menu-items" class="hidden md:flex md:items-center md:space-x-8 px-4 py-2 md:py-0 md:bg-transparent md:shadow-none bg-white shadow-md absolute top-full left-0 w-full z-40 md:static">
+            <li><a href="index.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">হোম</a></li>
+            <li><a href="#" class="block md:inline-block py-2 px-4 text-emerald-700 font-medium transition-colors border-b-2 border-emerald-700">নামাযের সময়সূচী</a></li>
+            <li><a href="dua.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">দোয়াসমুহ</a></li>
+            <li><a href="articles.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">প্রবন্ধসমূহ</a></li>
+            <li><a href="quizzes.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">কুইজ</a></li>
+            <li><a href="https://web.facebook.com/profile.php?id=61575355131122" target="_blank" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">Facebook Page</a></li>
         </ul>
     </nav>
+    
+    <!-- Main Content for Prayer Time -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-16">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-center text-emerald-700 mb-6">নামাযের সময়সূচী</h1>
+            
+            <!-- Location Selection -->
+            <div class="flex flex-col sm:flex-row items-center justify-center mb-8 gap-4">
+                <label for="location-select" class="text-lg font-medium text-gray-700">আপনার এলাকা নির্বাচন করুন:</label>
+                <div class="relative w-full sm:w-64">
+                    <select id="location-select" class="block w-full py-2 px-4 pr-8 rounded-lg border-2 border-gray-300 bg-white text-gray-800 focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer">
+                        <option value="dhaka">ঢাকা</option>
+                        <option value="chittagong">চট্টগ্রাম</option>
+                        <option value="khulna">খুলনা</option>
+                        <option value="sylhet">সিলেট</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
-    <div id="main">
-        <section id="prayer-time">
-            <div class="title">
-                <h2>নামাযের সময়সূচী</h2>
-                <hr>
+            <!-- Prayer Times Display -->
+            <div id="prayer-times-display" class="bg-emerald-50 rounded-lg p-6 shadow-inner">
+                <!-- Content will be generated by JavaScript -->
             </div>
-            <div class="city-choose">
-                <!-- Todo: City choosing feature -->
-                <div class="current-city">
-                    Showing timetable for <h3 id="city">Dhaka</h3> <button>Change City</button>
-                </div>
-            </div>
-            <div class="prayer-times">
-                <div class="prayer-time">
-                    <div class="name">
-                        <img src="assets/images/prayer-time.webp" alt="Fajr">
-                        <h3>ফজর</h3>
-                    </div>
-                    <h3 id="fajr"><div class="loader"></div></h3>
-                </div>
-                <div class="prayer-time">
-                    <div class="name">
-                        <img src="assets/images/prayer-time.webp" alt="Dhuhr">
-                        <h3>যোহর</h3>
-                    </div>
-                    <h3 id="dhuhr"><div class="loader"></div></h3>
-                </div>
-                <div class="prayer-time">
-                    <div class="name">
-                        <img src="assets/images/prayer-time.webp" alt="Asr">
-                        <h3>আসর</h3>
-                    </div>
-                    <h3 id="asr"><div class="loader"></div></h3>
-                </div>
-                <div class="prayer-time">
-                    <div class="name">
-                        <img src="assets/images/prayer-time.webp" alt="Maghrib">
-                        <h3>মাগরিব</h3>
-                    </div>
-                    <h3 id="maghrib"><div class="loader"></div></h3>
-                </div>
-                <div class="prayer-time">
-                    <div class="name">
-                        <img src="assets/images/prayer-time.webp" alt="Isha">
-                        <h3>এশা</h3>
-                    </div>
-                    <h3 id="isha"><div class="loader"></div></h3>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; কপিরাইট ২০২৫</p>
+        </div>
+    </main>
+    
+    <!-- Footer (Copied from the original document) -->
+    <footer class="bg-emerald-900 text-white text-center py-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <p>&copy; কপিরাইট ২০২৫, Created by Mahib Abrar</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="./assets/js/nav.js"></script>
-    <script src="./assets/js/prayer-time.js"></script>
+    <script src="https://peaceforpalestine.cc/embed.js" position="bottom-right"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationSelect = document.getElementById('location-select');
+            const prayerTimesDisplay = document.getElementById('prayer-times-display');
+
+            // Show loading spinner
+            function showLoading() {
+                prayerTimesDisplay.innerHTML = `
+                    <div class="flex flex-col items-center justify-center py-8">
+                        <svg class="animate-spin h-8 w-8 text-emerald-600 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                        </svg>
+                        <p class="text-emerald-700 font-medium">লোড হচ্ছে...</p>
+                    </div>
+                `;
+            }
+
+            async function fetchPrayerTimes(city) {
+                try {
+                    const url = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Bangladesh&method=2`;
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    return {
+                        timings: data.data.timings,
+                        hijriDate: data.data.date.hijri.date // e.g., "10-02-1447"
+                    };
+                } catch (error) {
+                    console.error("Error fetching prayer times:", error);
+                    return null;
+                }
+            }
+
+            function renderPrayerTimes(times, locationName, hijriDate) {
+                const today = new Date().toLocaleDateString('bn-BD', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                });
+
+                prayerTimesDisplay.innerHTML = `
+                    <h3 class="text-2xl font-bold text-center text-emerald-800 mb-2">${locationName}</h3>
+                    <p class="text-center text-gray-600 mb-6">
+                        আজ, ${today} <br>
+                        <span class="text-sm text-gray-500">(হিজরি: ${hijriDate})</span>
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                            <span class="text-xl font-medium text-gray-900 mb-1">ফজর</span>
+                            <span class="text-2xl font-bold text-emerald-600">${times.Fajr}</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                            <span class="text-xl font-medium text-gray-900 mb-1">যোহর</span>
+                            <span class="text-2xl font-bold text-emerald-600">${times.Dhuhr}</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                            <span class="text-xl font-medium text-gray-900 mb-1">আসর</span>
+                            <span class="text-2xl font-bold text-emerald-600">${times.Asr}</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+                            <span class="text-xl font-medium text-gray-900 mb-1">মাগরিব</span>
+                            <span class="text-2xl font-bold text-emerald-600">${times.Maghrib}</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md col-span-2 sm:col-span-1">
+                            <span class="text-xl font-medium text-gray-900 mb-1">ইশা</span>
+                            <span class="text-2xl font-bold text-emerald-600">${times.Isha}</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            async function updateTimes() {
+                showLoading();
+                const locationName = locationSelect.options[locationSelect.selectedIndex].text;
+                const data = await fetchPrayerTimes(locationName);
+                if (data) renderPrayerTimes(data.timings, locationName, data.hijriDate);
+            }
+
+            // Initial load
+            updateTimes();
+
+            // On change
+            locationSelect.addEventListener('change', updateTimes);
+        });
+    </script>
+
 </body>
 </html>
