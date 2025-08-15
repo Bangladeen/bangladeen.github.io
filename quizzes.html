@@ -1,103 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বাংলায় দ্বীন । কুইজসমুহ</title>
+    <title>কুইজ - বাংলায় দ্বীন</title>
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Bangla Font -->
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/nav.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/dua.css">
-
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.maateen.me/bangla/font.css" as="style" />
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Hind Siliguri Font for English (as requested) -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="https://placehold.co/32x32/006a4e/ffffff?text=BD" />
 
     <!-- Meta Tags (SEO) -->
-    <meta name="description" content="এই পাতায় কিছু কুইজ দেওয়া হলো।">
-    <meta name="author" content="বাংলায় দ্বীন">
+    <meta name="description" content="বাংলায় দ্বীন ওয়েবসাইটের ইসলামিক কুইজ খেলুন এবং আপনার দ্বীনি জ্ঞান যাচাই করুন।">
+    <meta name="keywords" content="ইসলামিক কুইজ, কুইজ, ইসলামিক, বাংলায় দ্বীন, ইসলামিক জ্ঞান">
+    <meta name="author" content="বাংলায় দ্বীন">
     <meta name="robots" content="index, follow">
 
     <!-- Opengraph -->
-    <meta property="og:title" content="বাংলায় দ্বীনঃ কুইজসমুহ">
+    <meta property="og:title" content="কুইজ - বাংলায় দ্বীন">
+    <meta property="og:image" content="https://placehold.co/1200x630/006a4e/ffffff?text=BanglaDeenQuiz">
+    <meta property="og:description" content="বাংলায় দ্বীন ওয়েবসাইটের ইসলামিক কুইজ খেলুন এবং আপনার দ্বীনি জ্ঞান যাচাই করুন।">
+    <meta property="og:url" content="https://mahibabrar222.github.io/BanglaDeen/quiz.html">
 
-    <!-- Schema Structure Data -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph":[
-                {
-                    "@type": "WebSite",
-                    "url": "https://bangladeen.github.io/quizzes.html"
-                }
-            ]
-            
-        }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K541WHG76Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K541WHG76Z');
     </script>
+    
+    <style>
+        /* Primary font for Bangla text */
+        body {
+            font-family: 'Bangla', sans-serif;
+            font-size: 20px !important;
+            line-height: 1.6;
+        }
+        /* A custom class for Hind Siliguri font, in case you need it for English text */
+        .font-siliguri {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
-    <nav>
-        <div class="nav-container">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Brand -->
-            <a href="/" class="brand">বাংলায় দ্বীন</a>
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors">বাংলায় দ্বীন</a>
             
-            <!-- Menu bar -->
-            <div class="menu-bar">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <!-- Mobile Menu button -->
+            <button id="menu-toggle" class="md:hidden p-2 text-gray-700 hover:text-emerald-700 focus:outline-none rounded-lg">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Menu -->
-        <ul class="menu-items">
-            <li><a href="./">হোম</a></li>
-            <li><a href="prayer-time.html">নামাযের সময়সূচী</a></li>
-            <li><a href="dua.html">দোয়াসমুহ</a></li>
-            <li><a href="articles.html">প্রবন্ধসমূহ</a></li>
-            <li><a href="quizzes.html">কুইজ</a></li>
+        <!-- Menu items (hidden on mobile by default) -->
+        <ul id="menu-items" class="hidden md:flex md:items-center md:space-x-8 px-4 py-2 md:py-0 md:bg-transparent md:shadow-none bg-white shadow-md absolute top-full left-0 w-full z-40 md:static">
+            <li><a href="index.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">হোম</a></li>
+            <li><a href="prayer-time.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">নামাযের সময়সূচী</a></li>
+            <li><a href="dua.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">দোয়াসমুহ</a></li>
+            <li><a href="articles.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">প্রবন্ধসমূহ</a></li>
+            <li><a href="quiz.html" class="block md:inline-block py-2 px-4 text-emerald-700 font-bold transition-colors">কুইজ</a></li>
+            <li><a href="https://web.facebook.com/profile.php?id=61575355131122" target="_blank" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">ফেসবুক পেজ</a></li>
         </ul>
     </nav>
 
-    <div id="main">
-        <section class="dua-section">
-            <div class="dua-container">
-                <h2 class="dua-title">কুইজ সমূহ</h2>
-                <p class="dua-description">কুইজ হলো একটি মজার এবং শিক্ষামূলক উপায় যা আমাদের জ্ঞান এবং দক্ষতা যাচাই করতে সাহায্য করে। নিচে কিছু কুইজ দেওয়া হলো।</p>
-        
-                <div class="dua-grid">
-                    <div class="dua-card">
-                        <a href="quizzes/makkah-to-madina-hijrat-companion.html">
-                            <h3>মক্কা থেকে মদীনায় হিজরতের সময় রাসূল (সা.) কার সাথে ছিলেন?</h3>
-                            <p>উত্তর জেনে নিন</p>
-                            <small>Click To See</small>
-                        </a>
+    <!-- Main Content -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">ইসলামিক কুইজ</h2>
+                <div class="h-1 w-24 bg-emerald-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Quiz Container -->
+            <div id="quiz-container" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 max-w-2xl mx-auto">
+                <!-- Question and Options -->
+                <div id="quiz-section">
+                    <h3 id="question-text" class="text-2xl font-semibold text-gray-900 mb-6 text-center"></h3>
+                    <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <!-- Options will be dynamically added here by JavaScript -->
+                    </div>
+                    <div id="feedback-message" class="text-center text-lg font-medium hidden"></div>
+                    <div class="flex justify-center mt-6">
+                        <button id="next-button" class="bg-emerald-600 text-white font-medium py-3 px-8 rounded-full hover:bg-emerald-700 transition-colors shadow-md hidden">
+                            পরবর্তী প্রশ্ন
+                        </button>
                     </div>
                 </div>
+
+                <!-- Score and Restart -->
+                <div id="results-section" class="text-center hidden">
+                    <h3 class="text-3xl font-bold text-emerald-700 mb-4">কুইজ শেষ!</h3>
+                    <p id="final-score" class="text-xl font-medium mb-6">আপনার স্কোর: <span class="font-bold">0</span>/5</p>
+                    <button id="restart-button" class="bg-gray-700 text-white font-medium py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow-md">
+                        আবার শুরু করুন
+                    </button>
+                </div>
             </div>
-        </section>        
-    </div>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; কপিরাইট ২০২৫</p>
+    <footer class="bg-emerald-900 text-white text-center py-6">
+        <div class="container mx-auto px-4">
+            <p>&copy; কপিরাইট ২০২৫, Created by Mahib Abrar</p>
+        </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="assets/js/nav.js"></script>
-    <script src="assets/js/dua.js"></script>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar toggle functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuItems = document.getElementById('menu-items');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menuToggle.addEventListener('click', () => {
+                const isMenuHidden = menuItems.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden', !isMenuHidden);
+                closeIcon.classList.toggle('hidden', isMenuHidden);
+            });
+
+            // Quiz functionality
+            const quizContainer = document.getElementById('quiz-container');
+            const quizSection = document.getElementById('quiz-section');
+            const resultsSection = document.getElementById('results-section');
+            const questionText = document.getElementById('question-text');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackMessage = document.getElementById('feedback-message');
+            const nextButton = document.getElementById('next-button');
+            const finalScoreElement = document.getElementById('final-score').querySelector('span');
+            const restartButton = document.getElementById('restart-button');
+
+            // Hardcoded quiz questions in Bengali
+            const questions = [
+                {
+                    question: "ইসলামের প্রথম স্তম্ভ কোনটি?",
+                    options: ["সালাত", "শাহাদা", "যাকাত", "হজ্ব"],
+                    answer: 1 // index of the correct answer
+                },
+                {
+                    question: "কুরআনের প্রথম সূরা কোনটি?",
+                    options: ["সূরা ফাতিহা", "সূরা বাকারা", "সূরা ইখলাস", "সূরা নাস"],
+                    answer: 0
+                },
+                {
+                    question: "নামাজের দ্বিতীয় স্তম্ভ কোনটি?",
+                    options: ["সালাত", "শাহাদা", "যাকাত", "সাওম"],
+                    answer: 0
+                },
+                {
+                    question: "ইসলামের পাঁচটি স্তম্ভের মধ্যে কোনটি ধনী মুসলিমদের জন্য আবশ্যক?",
+                    options: ["সালাত", "যাকাত", "সাওম", "শাহাদা"],
+                    answer: 1
+                },
+                {
+                    question: "কুরআনের সর্ববৃহৎ সূরা কোনটি?",
+                    options: ["সূরা আল ইমরান", "সূরা নিসা", "সূরা বাকারা", "সূরা মায়েদা"],
+                    answer: 2
+                }
+            ];
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+
+            // Function to display the current question
+            function showQuestion() {
+                // Reset UI elements
+                feedbackMessage.classList.add('hidden');
+                optionsContainer.innerHTML = '';
+                nextButton.classList.add('hidden');
+
+                const currentQuestion = questions[currentQuestionIndex];
+                questionText.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+
+                // Create buttons for each option
+                currentQuestion.options.forEach((option, index) => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.classList.add(
+                        'bg-gray-200', 'text-gray-900', 'font-medium', 'py-3', 'px-6', 'rounded-full',
+                        'transition-colors', 'duration-200', 'hover:bg-emerald-600', 'hover:text-white',
+                        'focus:outline-none', 'focus:ring-2', 'focus:ring-emerald-500', 'focus:ring-offset-2'
+                    );
+                    button.dataset.index = index;
+                    button.addEventListener('click', handleAnswerClick);
+                    optionsContainer.appendChild(button);
+                });
+            }
+
+            // Function to handle a user's answer
+            function handleAnswerClick(event) {
+                const selectedOption = event.target;
+                const selectedIndex = parseInt(selectedOption.dataset.index);
+                const currentQuestion = questions[currentQuestionIndex];
+
+                // Check if the answer is correct
+                if (selectedIndex === currentQuestion.answer) {
+                    score++;
+                    selectedOption.classList.remove('bg-gray-200', 'hover:bg-emerald-600');
+                    selectedOption.classList.add('bg-green-600', 'text-white');
+                    feedbackMessage.textContent = "সঠিক উত্তর!";
+                    feedbackMessage.classList.remove('text-red-600');
+                    feedbackMessage.classList.add('text-green-600');
+                } else {
+                    selectedOption.classList.remove('bg-gray-200', 'hover:bg-emerald-600');
+                    selectedOption.classList.add('bg-red-600', 'text-white');
+                    feedbackMessage.textContent = "ভুল উত্তর। সঠিক উত্তর হলো: " + currentQuestion.options[currentQuestion.answer];
+                    feedbackMessage.classList.remove('text-green-600');
+                    feedbackMessage.classList.add('text-red-600');
+                }
+                feedbackMessage.classList.remove('hidden');
+
+                // Disable all option buttons after an answer is selected
+                Array.from(optionsContainer.children).forEach(button => {
+                    button.disabled = true;
+                });
+                
+                nextButton.classList.remove('hidden');
+            }
+
+            // Function to move to the next question
+            nextButton.addEventListener('click', () => {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    showQuestion();
+                } else {
+                    showResults();
+                }
+            });
+
+            // Function to show the final results
+            function showResults() {
+                quizSection.classList.add('hidden');
+                resultsSection.classList.remove('hidden');
+                finalScoreElement.textContent = `${score}/${questions.length}`;
+            }
+
+            // Function to restart the quiz
+            restartButton.addEventListener('click', () => {
+                currentQuestionIndex = 0;
+                score = 0;
+                quizSection.classList.remove('hidden');
+                resultsSection.classList.add('hidden');
+                showQuestion();
+            });
+
+            // Start the quiz when the page loads
+            showQuestion();
+        });
+    </script>
 </body>
 </html>
