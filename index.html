@@ -1,37 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BanglaDeen</title>
+    <title>বাংলায় দ্বীন</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Bangla Font -->
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/nav.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-
-    <!-- Preload Background -->
-     
+    <!-- Hind Siliguri Font for English (as requested) -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="https://placehold.co/32x32/006a4e/ffffff?text=BD" />
 
     <!-- Meta Tags (SEO) -->
-    <meta name="description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
-    <meta name="keywords" content="ইসলাম, নামায, কুরআন, হাদিস, ইসলামিক, বাংলায় দ্বীন">
-    <meta name="author" content="বাংলায় দ্বীন">
+    <meta name="description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
+    <meta name="keywords" content="ইসলাম, নামায, কুরআন, হাদিস, ইসলামিক, বাংলায় দ্বীন">
+    <meta name="author" content="বাংলায় দ্বীন">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="bZ2u3bU38K-drTe1S1KOPdPw6_iWjrBAdsgnwM1PHek" />
 
     <!-- Opengraph -->
-    <meta property="og:title" content="বাংলায় দ্বীন">
-    <meta property="og:image" content="./favicon.ico">
-    <meta property="og:description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
+    <meta property="og:title" content="বাংলায় দ্বীন">
+    <meta property="og:image" content="https://placehold.co/1200x630/006a4e/ffffff?text=BanglaDeen">
+    <meta property="og:description" content="বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, দোয়াসমুহ এবং ইসলামিক বিষয়বস্তু।">
     <meta property="og:url" content="https://mahibabrar222.github.io/BanglaDeen/">
-
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K541WHG76Z"></script>
@@ -39,89 +36,142 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-K541WHG76Z');
     </script>
+    
+    <style>
+        /* Primary font for Bangla text */
+        body {
+            font-family: 'Bangla', sans-serif;
+            font-size: 20px !important;
+        }
+        /* A custom class for Hind Siliguri font, in case you need it for English text */
+        .font-siliguri {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .hero-overlay {
+            background-image: url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
-    <nav>
-        <div class="nav-container">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Brand -->
-            <a href="/" class="brand">বাংলায় দ্বীন</a>
+            <a href="#" class="text-2xl md:text-3xl font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors">বাংলায় দ্বীন</a>
             
-            <!-- Menu bar -->
-            <div class="menu-bar">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <!-- Mobile Menu button -->
+            <button id="menu-toggle" class="md:hidden p-2 text-gray-700 hover:text-emerald-700 focus:outline-none rounded-lg">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Menu -->
-        <ul class="menu-items">
-            <li><a href="./">হোম</a></li>
-            <li><a href="prayer-time.html">নামাযের সময়সূচী</a></li>
-            <li><a href="dua.html">দোয়াসমুহ</a></li>
-            <li><a href="articles.html">প্রবন্ধসমূহ</a></li>
-            <li><a href="quizzes.html">কুইজ</a></li>
-            <li><a href="https://web.facebook.com/profile.php?id=61575355131122" target="_blank">Facebook Page</a></li>
+        <!-- Menu items (hidden on mobile by default) -->
+        <ul id="menu-items" class="hidden md:flex md:items-center md:space-x-8 px-4 py-2 md:py-0 md:bg-transparent md:shadow-none bg-white shadow-md absolute top-full left-0 w-full z-40 md:static">
+            <li><a href="#" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">হোম</a></li>
+            <li><a href="prayer-time.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">নামাযের সময়সূচী</a></li>
+            <li><a href="dua.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">দোয়াসমুহ</a></li>
+            <li><a href="articles.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">প্রবন্ধসমূহ</a></li>
+            <li><a href="quizzes.html" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">কুইজ</a></li>
+            <li><a href="https://web.facebook.com/profile.php?id=61575355131122" target="_blank" class="block md:inline-block py-2 px-4 text-gray-700 hover:text-emerald-700 font-medium transition-colors">ফেসবুক পেজ</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <div id="main">
-        <section class="hero-overlay">
-            <section class="hero">
-                <h1>আসসালামু আলাইকুম</h1>
-                <p>বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, কুরআন শরীফ, হাদিস শরীফ এবং ইসলামিক বিষয়বস্তু।</p>    
-            </section>
-        </section>
-        <section id="services">
-            <div class="title">
-                <h2>আমাদের সেবা</h2>
-                <hr>
-            </div>
-            <div class="services">
-                <div class="service">
-                    <img src="assets/images/prayer-time.webp" alt="Namaz Time">
-                    <h3>নামাযের সময়সূচী</h3>
-                    <p>আপনি পাবেন নামাযের সময়সূচী এবং সঠিক নামাযের সময়।</p>
-                    <a href="prayer-time.html" class="go">নামাজের সময়সূচী দেখুন</a>
-                </div>
-                <div class="service">
-                    <img src="assets/images/duya.webp" alt="দোয়াসমুহ">
-                    <h3>দোয়াসমুহ</h3>
-                    <p>এখানে আপনি পাবেন কুরআন ও হাদিস থেকে নেয়া দোয়া সমূহ।</p>
-                    <a href="dua.html" class="go">দোয়াসমূহ দেখুন</a>
-                </div>
-                <div class="service">
-                    <img src="https://img.icons8.com/ios-filled/100/quiz.png" alt="Quiz">
-                    <h3>কুইজ</h3>
-                    <p>দ্বীন সম্পর্কিত বিভিন্ন কুইজ ও এর উত্তর</p>
-                    <a href="quizzes.html" class="go">কুইজ গুলো দেখুন</a>
-                </div>
-                <div class="service">
-                    <img src="assets/images/hadith.jpg" alt="হাদিস">
-                    <h3>হাদিস</h3>
-                    <p>আপনি পাবেন হাদিস শরীফ এবং হাদিস শরীফ অনুবাদ।</p>
-                    <a href="#" class="go disabled">Upcoming</a>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-overlay h-96 flex items-center justify-center text-white text-center">
+            <div class="bg-black bg-opacity-60 backdrop-blur-sm p-6 sm:p-12 rounded-lg max-w-2xl mx-4 shadow-xl">
+                <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">আসসালামু আলাইকুম</h1>
+                <p class="text-lg sm:text-xl font-light">বাংলায় দ্বীন একটি ইসলামিক ওয়েবসাইট। এখানে আপনি পাবেন নামাযের সময়সূচী, কুরআন শরীফ, হাদিস শরীফ এবং ইসলামিক বিষয়বস্তু।</p>
             </div>
         </section>
-    </div>
+        
+        <!-- Services Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">আমাদের সেবা</h2>
+                    <div class="h-1 w-24 bg-emerald-600 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Namaz Time Service Card -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://placehold.co/400x250/004d40/ffffff?text=Prayer Time" alt="Namaz Time" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">নামাযের সময়সূচী</h3>
+                            <p class="text-gray-600 mb-4">আপনি পাবেন নামাযের সময়সূচী এবং সঠিক নামাযের সময়।</p>
+                            <a href="prayer-time.html" class="inline-block bg-emerald-600 text-white font-medium py-2 px-4 rounded-full hover:bg-emerald-700 transition-colors shadow-md">নামাজের সময়সূচী দেখুন</a>
+                        </div>
+                    </div>
 
-    <div id="widget-stand-for"></div>
+                    <!-- Dua Service Card -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://placehold.co/400x250/006a4e/ffffff?text=Dua" alt="দোয়াসমুহ" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">দোয়াসমুহ</h3>
+                            <p class="text-gray-600 mb-4">এখানে আপনি পাবেন কুরআন ও হাদিস থেকে নেয়া দোয়া সমূহ।</p>
+                            <a href="dua.html" class="inline-block bg-emerald-600 text-white font-medium py-2 px-4 rounded-full hover:bg-emerald-700 transition-colors shadow-md">দোয়াসমূহ দেখুন</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quiz Service Card -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://placehold.co/400x250/38a169/ffffff?text=Quiz" alt="Quiz" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">কুইজ</h3>
+                            <p class="text-gray-600 mb-4">দ্বীন সম্পর্কিত বিভিন্ন কুইজ ও এর উত্তর</p>
+                            <a href="quizzes.html" class="inline-block bg-emerald-600 text-white font-medium py-2 px-4 rounded-full hover:bg-emerald-700 transition-colors shadow-md">কুইজ গুলো দেখুন</a>
+                        </div>
+                    </div>
 
+                    <!-- Hadith Service Card -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://placehold.co/400x250/48bb78/ffffff?text=Hadith" alt="হাদিস" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">হাদিস</h3>
+                            <p class="text-gray-600 mb-4">আপনি পাবেন হাদিস শরীফ এবং হাদিস শরীফ অনুবাদ।</p>
+                            <span class="inline-block bg-gray-400 text-white font-medium py-2 px-4 rounded-full cursor-not-allowed">আসছে...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <!-- Footer -->
-    <footer>
-        <p>&copy; কপিরাইট ২০২৫, Created by Mahib Abrar</p>
+    <footer class="bg-emerald-900 text-white text-center py-6">
+        <div class="container mx-auto px-4">
+            <p>&copy; কপিরাইট ২০২৫, Created by Mahib Abrar</p>
+        </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="assets/js/nav.js"></script>
+    <!-- Scripts -->
+    <div id="widget-stand-for"></div>
+    <script src="https://peaceforpalestine.cc/embed.js" position="bottom-right"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuItems = document.getElementById('menu-items');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
 
-    <!-- EMBED -->
-    <script defer src="https://peaceforpalestine.cc/embed.js" position="bottom-right"></script>
+            menuToggle.addEventListener('click', () => {
+                const isMenuHidden = menuItems.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden', !isMenuHidden);
+                closeIcon.classList.toggle('hidden', isMenuHidden);
+            });
+        });
+    </script>
 </body>
 </html>
